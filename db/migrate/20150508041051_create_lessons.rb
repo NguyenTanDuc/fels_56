@@ -7,8 +7,6 @@ class CreateLessons < ActiveRecord::Migration
       t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
-    end
-    add_index :lessons, [:category_id]
-    add_index :lessons, [:user_id]
+    end    
   end
 end

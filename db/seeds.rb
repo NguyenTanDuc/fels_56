@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+50.times do |n|
+  content = "English#{n+1}"
+  Word.create!(content: content)
+end
+
+words = Word.order(:created_at).take(50)
+4.times do |n|
+  content = "Vietnamese"
+  words.each {|word| word.answers.create! content: content, correct: n == 1}
+end

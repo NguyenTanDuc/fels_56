@@ -77,18 +77,21 @@ ActiveRecord::Schema.define(version: 20150508042133) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.boolean  "admin"
+    t.string   "avatar"
     t.string   "password_digest"
     t.string   "password_confirmation"
-    t.integer  "level"
-    t.string   "avatar"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "words", force: :cascade do |t|
     t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
+
+  add_index "words", ["category_id"], name: "index_words_on_category_id"
 
 end

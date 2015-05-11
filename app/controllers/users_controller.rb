@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find param[:id]    
+    @user = User.find params[:id]    
   end
 
   def new
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = "Welcome To The Framgia E-Learning System!"
+      flash[:success] = I18n.t :welcome
       redirect_to @user
     else
       render 'new'
@@ -20,6 +20,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require :user.permit :name, :email, :password, :password_confirmation
+    params.require(:user).permit :name, :email, :password, :password_confirmation
   end
 end

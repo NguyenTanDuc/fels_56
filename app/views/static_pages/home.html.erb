@@ -1,5 +1,5 @@
 <div class="center jumbotron">
-  <h1>Welcome to the Framgia E-Learning System!</h1>
-  <h2> This is the home page for the Framgia E-Learning System. </h2>
-  <%= link_to "Sign Up Now!", sign_up_path, class: "btn btn-lg btn-primary" %>
+  <h1><%= I18n.t :welcome %></h1>
+  <h2><%= I18n.t :homepage %></h2>
+  <%= link_to I18n.t(:sign_up), sign_up_path, class: "btn btn-lg btn-primary" %>
 </div>

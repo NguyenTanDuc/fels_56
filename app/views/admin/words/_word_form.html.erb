@@ -1,0 +1,21 @@
+<%= form_for [:admin, @word] do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <table class="table table-bordered">
+    <tr>
+      <td>Categories</td>
+      <td>
+        <%= f.collection_select(:category_id, @categories, :id, 
+                                :name, {prompt: false}, 
+                                {class: "form-control"}) %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= f.label :word %></td>
+      <td><%= f.text_field :content, class: "form-control" %></td>
+    </tr>
+    <%= f.fields_for :answers do |builder| %>
+      <%= render "answer_fields", f: builder %>
+    <% end %>    
+  </table>
+  <%= f.submit t(:submit), class: "btn btn-primary" %>
+<% end %>

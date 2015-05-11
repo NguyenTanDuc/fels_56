@@ -44,4 +44,8 @@ class User < ActiveRecord::Base
   def forget
     update_attribute :remember_digest, nil 
   end
+
+  def is_admin?
+    redirect_to log_in_path unless level?
+  end
 end

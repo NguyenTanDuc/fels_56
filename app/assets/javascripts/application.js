@@ -15,3 +15,11 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+// ANSWERS CHECKBOX
+$(document).ready(function() {
+  $("input[type=checkbox]").click(function(){
+    $("input[type=checkbox]").not($(this)).prop('checked', false);
+  })
+});
+

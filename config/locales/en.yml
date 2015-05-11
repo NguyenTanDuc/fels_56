@@ -1,23 +1,29 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  welcome: "Welcome To The Framgia E-Learning System!"
+  homepage: "This is the home page for the Framgia E-Learning System."
+  danger: "Invalid Email/Password Combination!"
+  sign_up_now: "Sign Up Now!"
+  sign_up: "Sign Up"
+  user_name: "User Name:"
+  user_email: "User Email:"
+  password: "Password:"
+  password_confirmation: "Password Confirmation:"
+  create_my_account: "Create My Account!"
+  remember_me: "Remember Me?"
+  log_in: "Log In"
+  new_user: "New User?"
+  fels: "Framgia E-Learning System"
+  email_invalid_format: "Email Is Invalid Format!"
+  account: "Account"
+  about: "About"
+  contact: "Contact"
+  activities: "Activities"
+  profiles: "Profiles"
+  settings: "Settings"
+  home: "Home"
+  word_list: "Word List"
+  categories: "Categories"
+  lesson: "Lesson"
+  result: "Result"
+  user_show: "User Show"
+  log_out: "Log Out"

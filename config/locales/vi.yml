@@ -1,0 +1,41 @@
+vi:
+  welcome: "Chào Mừng Bạn Đến Với Hệ Thống E-Learning Của Framgia!"
+  homepage: "Đây là trang chủ dành cho Hệ thống E-Learning của Framgia."
+  danger: "Sai tên đăng nhập hoặc/và mật khẩu!"
+  sign_up_now: "Đăng Ký Ngay!"
+  sign_up: "Đăng Ký"
+  user_name: "Tên Người Dùng:"
+  user_email: "Email:"
+  password: "Mật Khẩu:"
+  password_confirmation: "Xác Nhận Mật Khẩu:"
+  create_my_account: "Tạo Tài Khoản!"
+  remember_me: "Ghi Nhớ?"
+  log_in: "Đăng Nhập"
+  new_user: "Người Dùng Mới?"
+  fels: "Framgia E-Learning System"
+  email_invalid_format: "sai định dạng."
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "bị để trống."
+            email:
+              blank: "bị để trống."
+              taken: "đã được sử dụng."
+            password:
+              blank: "bị để trống."
+  account: "Tài Khoản"
+  about: "Thông Tin"
+  contact: "Liên Hệ"
+  activities: "Các Hoạt Động"
+  profiles: "Hồ Sơ" 
+  settings: "Cài Đặt"
+  home: "Trang Chủ"
+  word_list: "Danh Sách Từ"
+  categories: "Chủ Đề"
+  lesson: "Bài Học"
+  result: "Kết Quả"
+  user_show: "Người Dùng"
+  log_out: "Đăng Xuất"

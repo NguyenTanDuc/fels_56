@@ -1,18 +1,17 @@
 <div class="container">    
-    <table class="table table-bordered">
+  <table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>Word content</th>        
+    </tr>
+    <% @words.each do |word| %>
       <tr>
-        <th>ID</th>
-        <th>Word content</th>        
+        <td><%= word.id %></td>
+        <td><%= word.content %></td>          
       </tr>
-      <% @words.each do |word| %>
-        <tr>
-          <td><%= word.id %></td>
-          <td><%= word.content %></td>          
-        </tr>
-      <% end %>
-    </table>
-    <div class="col-md-6 col-md-offset-3 paginate">
-      <%= will_paginate @words %>
-    </div>
+    <% end %>
+  </table>
+  <div class="col-md-6 col-md-offset-3 paginate">
+    <%= will_paginate @words %>
   </div>
 </div>

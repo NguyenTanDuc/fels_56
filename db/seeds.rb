@@ -1,3 +1,10 @@
+User.create!(name: "Example User",
+             email: "example@railstutorial.org",
+             password:              "123456",
+             password_confirmation: "123456",
+             level:        1
+             )
+
 5.times do |n|
   name = "Category#{n+1}"
   Category.create!(name: name)

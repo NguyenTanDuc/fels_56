@@ -38,3 +38,6 @@ en:
   delete_warning: "Are you sure?"
   errors: "Errors"
   submit: "Submit"
+  require_login: "Please log in"
+  link_edit: "Edit"
+  link_delete: "Delete"

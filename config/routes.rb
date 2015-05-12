@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   delete 'log_out' => 'sessions#destroy'
 
   resources :users, except: [:index]
-  resources :words
-  resources :categories
-  resources :lessons, except: [:edit, :update]
+  resources :words, only: [:index]
 
+  namespace :admin do
+    root to: "words#index"
+    resources :words
+  end
 end

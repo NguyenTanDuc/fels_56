@@ -1,6 +1,9 @@
 <div class="container">
   <div class="row">
-    <h1>Categories</h1>     
+    <h1>Categories</h1>
+    <p>
+      <%= link_to t(:add_new_category), new_admin_category_path, class: "btn btn-success" %>
+    </p>    
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
@@ -14,6 +17,10 @@
           <td><%= category.name %></td>
           <td></td>
           <td>
+            <%= link_to t(:link_edit), edit_admin_category_path(category.id), class: "btn btn-primary" %>
+            <%= link_to t(:link_delete), admin_category_path(category.id), method: :delete, 
+                                        data: {confirm: t(:delete_warning)}, 
+                                        class: "btn btn-primary" %>
             <%= link_to t(:lesson_start), root_path, class: "btn btn-primary" %>
           </td>
         </tr>

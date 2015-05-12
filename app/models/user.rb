@@ -46,6 +46,6 @@ class User < ActiveRecord::Base
   end
 
   def is_admin?
-    redirect_to log_in_path unless level?
+    level == 1
   end
 end

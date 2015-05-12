@@ -43,4 +43,8 @@ module SessionsHelper
       redirect_to root_path
     end
   end
+
+  def is_admin?
+    current_user.level == 1
+  end
 end

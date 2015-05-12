@@ -36,8 +36,33 @@ en:
   add_new_word: "Add new word"
   edit_word: "Edit word"
   delete_warning: "Are you sure?"
-  errors: "Errors"
+  error: "error"
   submit: "Submit"
   require_login: "Please log in"
   link_edit: "Edit"
   link_delete: "Delete"
+  add_new_category: "Add new category"
+  lesson_start: "Start lesson"
+  require_permisson: "You don't have permisson"
+  activerecord:
+    errors:
+      models:
+        word:
+          attributes:
+            content:
+              blank: "can't be blank"
+              too_short: "can't be too short"
+              too_long: "can't be too long"
+        answer:
+          attributes:
+            content:
+              blank: "can't be blank"
+              too_short: "can't be too short"
+              too_long: "can't be too long"
+        category:
+          attributes:
+            name:
+              blank: "can't be blank"
+              too_short: "can't be too short"
+              too_long: "can't be too long"
+              taken: "has been taken"

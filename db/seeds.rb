@@ -1,8 +1,15 @@
+User.create!(name: "Normal User",
+             email: "normal@railstutorial.org",
+             password: "123456",
+             password_confirmation: "123456",
+             level: 2
+             )
+
 User.create!(name: "Example User",
              email: "example@railstutorial.org",
-             password:              "123456",
+             password: "123456",
              password_confirmation: "123456",
-             level:        1
+             level: 1
              )
 
 5.times do |n|

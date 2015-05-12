@@ -14,6 +14,7 @@ class Admin::WordsController < ApplicationController
   end
 
   def create   
+    @categories = Category.all
     @word = Word.new word_params
     if @word.save
       flash[:success] = t :create_success
@@ -55,6 +56,6 @@ class Admin::WordsController < ApplicationController
   end
 
   def is_admin
-    current_user.is_admin?
+    redirect_to root_path unless current_user.is_admin?
   end
 end

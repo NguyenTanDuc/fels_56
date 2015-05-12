@@ -6,23 +6,40 @@
         <li>
           <%= link_to t(:home), root_path %>
         </li>
-        <li>
-          <%= link_to t(:word_list), words_path %>
-        </li>
-        <li>
-          <%= link_to t(:categories), root_path %>
-        </li>
-        <li>
-          <%= link_to t(:lesson), root_path %>
-        </li>
-        <li>
-          <%= link_to t(:result), root_path %>
-        </li>
-
         <% if logged_in? %>
-          <li>
-            <%= link_to t(:user_show), root_path %>
-          </li>          
+          <% if current_user.is_admin? %>
+            <li>
+              <%= link_to t(:word_list), admin_words_path %>
+            </li>
+            <li>
+              <%= link_to t(:categories), admin_categories_path %>
+            </li>
+            <li>
+              <%= link_to t(:lesson), admin_root_path %>
+            </li>
+            <li>
+              <%= link_to t(:result), admin_root_path %>
+            </li>
+            <li>
+              <%= link_to t(:user_show), admin_root_path %>
+            </li>  
+          <% else %>
+            <li>
+              <%= link_to t(:word_list), words_path %>
+            </li>
+            <li>
+              <%= link_to t(:categories), categories_path %>
+            </li>
+            <li>
+              <%= link_to t(:lesson), root_path %>
+            </li>
+            <li>
+              <%= link_to t(:result), root_path %>
+            </li>
+            <li>
+              <%= link_to t(:user_show), root_path %>
+            </li> 
+          <% end %>                   
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= t :account %> <b class="caret"></b> </a>
             <ul class="dropdown-menu">

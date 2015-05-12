@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'log_in' => 'sessions#create'
   delete 'log_out' => 'sessions#destroy'
 
-  resources :users, except: [:index]
+  resources :users, except: [:destroy]
   resources :words, only: [:index]
 
   namespace :admin do

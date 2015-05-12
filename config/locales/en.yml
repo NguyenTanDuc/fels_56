@@ -41,3 +41,21 @@ en:
   require_login: "Please log in"
   link_edit: "Edit"
   link_delete: "Delete"
+  edit_user: "Edit User"
+  save_changes: "Save Changes"
+  profile_updated: "Profile Updated"
+  please_log_in: "Please Log In"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Can't Be Blank!"
+            email:
+              blank: "Can't Be Blank!"
+              taken: "Has Been Taken!"
+            password:
+              blank: "Can't Be Blank!"
+            password_confirmation:
+              confirmation: "Can't Be Blank!"

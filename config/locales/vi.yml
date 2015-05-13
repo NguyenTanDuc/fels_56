@@ -31,6 +31,7 @@ vi:
   save_changes: "Lưu Các Thay Đổi"
   profile_updated: "Thông Tin Người Dùng Đã Được Cập Nhật."
   please_log_in: "Vui Lòng Đăng Nhập Để Tiếp Tục"
+  all_users: "Thành Viên"
   activerecord:
     errors:
       models:

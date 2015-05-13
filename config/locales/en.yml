@@ -48,6 +48,7 @@ en:
   add_new_category: "Add new category"
   lesson_start: "Start lesson"
   require_permisson: "You don't have permisson"
+  all_users: "All Users"
   activerecord:
     errors:
       models:

@@ -13,19 +13,7 @@ vi:
   log_in: "Đăng Nhập"
   new_user: "Người Dùng Mới?"
   fels: "Framgia E-Learning System"
-  email_invalid_format: "sai định dạng."
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            name:
-              blank: "bị để trống."
-            email:
-              blank: "bị để trống."
-              taken: "đã được sử dụng."
-            password:
-              blank: "bị để trống."
+  email_invalid_format: "Email sai định dạng."
   account: "Tài Khoản"
   about: "Thông Tin"
   contact: "Liên Hệ"
@@ -39,3 +27,21 @@ vi:
   result: "Kết Quả"
   user_show: "Người Dùng"
   log_out: "Đăng Xuất"
+  edit_user: "Thay Đổi Thông Tin Người Dùng"
+  save_changes: "Lưu Các Thay Đổi"
+  profile_updated: "Thông Tin Người Dùng Đã Được Cập Nhật."
+  please_log_in: "Vui Lòng Đăng Nhập Để Tiếp Tục"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Không Được Để Trống!"
+            email:
+              blank: "Không Được Để Trống!"
+              taken: "đã được sử dụng."
+            password:
+              blank: "Không Được Để Trống!"
+            password_confirmation:
+              confirmation: "Không Được Để Trống!"

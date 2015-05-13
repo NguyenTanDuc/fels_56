@@ -1,0 +1,10 @@
+<% provide :title, 'All users' %>
+<h1><%= t :all_users %></h1>
+
+<%= will_paginate %>
+
+<li class="users">
+  <%= render @users %>
+</li>
+
+<%= will_paginate %>

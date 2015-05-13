@@ -1,7 +1,7 @@
 vi:
   welcome: "Chào Mừng Bạn Đến Với Hệ Thống E-Learning Của Framgia!"
-  homepage: "Đây là trang chủ dành cho Hệ thống E-Learning của Framgia."
-  danger: "Sai tên đăng nhập hoặc/và mật khẩu!"
+  homepage: "Đây Là Trang Chủ Dành Cho Hệ Thống E-Learning Của Framgia."
+  danger: "Sai Tên Đăng Nhập Hoặc/Và Mật Khẩu!"
   sign_up_now: "Đăng Ký Ngay!"
   sign_up: "Đăng Ký"
   user_name: "Tên Người Dùng:"
@@ -32,6 +32,7 @@ vi:
   profile_updated: "Thông Tin Người Dùng Đã Được Cập Nhật."
   please_log_in: "Vui Lòng Đăng Nhập Để Tiếp Tục"
   all_users: "Thành Viên"
+  change: "Thay Đổi"
   activerecord:
     errors:
       models:
@@ -41,7 +42,7 @@ vi:
               blank: "Không Được Để Trống!"
             email:
               blank: "Không Được Để Trống!"
-              taken: "đã được sử dụng."
+              taken: "Đã Được Sử Dụng."
             password:
               blank: "Không Được Để Trống!"
             password_confirmation:

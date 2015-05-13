@@ -13,8 +13,8 @@
           <td><%= category.id %></td>
           <td><%= category.name %></td>
           <td></td>
-          <td>
-            <%= link_to t(:lesson_start), root_path, class: "btn btn-primary" %>
+          <td data-no-turbolink='true'>
+            <%= link_to t(:lesson_start), new_category_lesson_path(category.id), class: "btn btn-primary" %>
           </td>
         </tr>
       <% end %>      

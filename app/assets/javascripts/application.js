@@ -14,12 +14,22 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require jquery.bxslider
 //= require_tree .
 
-// ANSWERS CHECKBOX
+
 $(document).ready(function() {
+  // Answer check only one
   $("input[type=checkbox]").click(function(){
     $("input[type=checkbox]").not($(this)).prop('checked', false);
   })
+
+  // Lesson slider
+  $('.bxslider').bxSlider({
+    captions: true,
+    controls: true,
+    nextText: "Next",
+    prevText: "Prev"
+  });
 });
 

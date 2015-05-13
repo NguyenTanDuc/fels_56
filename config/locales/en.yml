@@ -50,6 +50,15 @@ en:
   require_permisson: "You Don't Have Permission"
   all_users: "All Users"
   change: "Change"
+  account_activation: "Account Activation"
+  password_reset: "Password Reset"
+  hi: "Hi"
+  click_to_activate: "Click On The Link Below To Activate Your Account:"
+  activate: "Activate!"
+  please_check_email: "Please Check Your Email To Activate Your Account."
+  account_activated: "Account Activated!"
+  invalid_activation_link: "Invalid Activation Link."
+  account_not_activated: "Account Not Activated. Please Check Your Email To Activate Your Account."
   activerecord:
     errors:
       models:

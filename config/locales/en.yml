@@ -1,6 +1,6 @@
 en:
   welcome: "Welcome To The Framgia E-Learning System!"
-  homepage: "This is the home page for the Framgia E-Learning System."
+  homepage: "This Is The Home Page For The Framgia E-Learning System."
   danger: "Invalid Email/Password Combination!"
   sign_up_now: "Sign Up Now!"
   sign_up: "Sign Up"
@@ -27,28 +27,29 @@ en:
   result: "Result"
   user_show: "User Show"
   log_out: "Log Out"
-  create_success: "Create success"
-  create_fail: "Create fail"
-  update_success: "Update success"
-  update_fail: "Update fail"
-  delete_success: "Delete success"
-  delete_fail: "Delete fail"
-  add_new_word: "Add new word"
-  edit_word: "Edit word"
-  delete_warning: "Are you sure?"
-  error: "error"
+  create_success: "Create Success"
+  create_fail: "Create Fail"
+  update_success: "Update Success"
+  update_fail: "Update Fail"
+  delete_success: "Delete Success"
+  delete_fail: "Delete Fail"
+  add_new_word: "Add New Word"
+  edit_word: "Edit Word"
+  delete_warning: "Are You Sure?"
+  error: "Error"
   submit: "Submit"
-  require_login: "Please log in"
+  require_login: "Please Log In"
   link_edit: "Edit"
   link_delete: "Delete"
   edit_user: "Edit User"
   save_changes: "Save Changes"
   profile_updated: "Profile Updated"
   please_log_in: "Please Log In"
-  add_new_category: "Add new category"
-  lesson_start: "Start lesson"
-  require_permisson: "You don't have permisson"
+  add_new_category: "Add New Category"
+  lesson_start: "Start Lesson"
+  require_permisson: "You Don't Have Permission"
   all_users: "All Users"
+  change: "Change"
   activerecord:
     errors:
       models:
@@ -66,19 +67,19 @@ en:
         word:
           attributes:
             content:
-              blank: "can't be blank"
-              too_short: "can't be too short"
-              too_long: "can't be too long"
+              blank: "Can't Be Blank!"
+              too_short: "Can't Be Too Short!"
+              too_long: "Can't Be Too Long"
         answer:
           attributes:
             content:
-              blank: "can't be blank"
-              too_short: "can't be too short"
-              too_long: "can't be too long"
+              blank: "Can't Be Blank"
+              too_short: "Can't Be Too Short!"
+              too_long: "Can't Be Too Long"
         category:
           attributes:
             name:
-              blank: "can't be blank"
-              too_short: "can't be too short"
-              too_long: "can't be too long"
-              taken: "has been taken"
+              blank: "Can't Be Blank"
+              too_short: "Can't Be Too Short!"
+              too_long: "Can't Be Too Long"
+              taken: "Has Been Taken!"

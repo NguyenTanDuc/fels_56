@@ -21,8 +21,17 @@
 $(document).ready(function() {
   // Answer check only one
   $("input[type=checkbox]").click(function(){
+    var check_flag = false;    
     $("input[type=checkbox]").not($(this)).prop('checked', false);
-  })
+    $("input[type=checkbox]").each(function(){
+      if ($(this).prop('checked') == true){ 
+        check_flag = true;
+      }
+    });
+    if(check_flag == false){
+      alert("Warning, your word don't have answer correct yet!");
+    }
+  });
 
   // Lesson slider
   $('.bxslider').bxSlider({

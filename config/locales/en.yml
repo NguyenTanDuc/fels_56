@@ -59,6 +59,18 @@ en:
   account_activated: "Account Activated!"
   invalid_activation_link: "Invalid Activation Link."
   account_not_activated: "Account Not Activated. Please Check Your Email To Activate Your Account."
+  forgot_password: "Forgot Password?"
+  submit: "Submit!"
+  email_sent: "Email Sent With Password Reset Instructions."
+  email_not_found: "Email Address Not Found."
+  click_to_reset_password: "Please Click This Link To Reset Password:"
+  expire: "This Link Will Expire In Two Hours. If You Did Not Request Your Password To Be Reset, Please Ignore This Email And Your Password Will Stay As It Is."
+  reset_password: "Reset Password"
+  update_password: "Update Password"
+  email: "Email:"
+  password_blank: "Password Can't Be Blank!"
+  password_updated: "Password Updated"
+  password_expired: "Password Reset Link Has Been Expired."
   activerecord:
     errors:
       models:

@@ -1,0 +1,13 @@
+<h1>Lesson</h1>
+<%= form_for [@category, @lesson] do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <ul class="bxslider">
+    <%= f.fields_for :lessons_words do |builder| %>
+      <%= render "lessons_words_form", f: builder %>
+    <% end %>  
+  </ul>   
+<hr>
+<div class="row">
+  <%= f.submit t(:submit), class: "btn btn-primary" %>
+</div>
+<% end %>

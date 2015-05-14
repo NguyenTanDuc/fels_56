@@ -1,0 +1,24 @@
+<div class="row">
+  <h1><%= @category.name %></h1>
+  <h2>Result: <%= @lesson.mark %>/20</h2>
+  <table class="table table-bordered">
+    <tr>
+      <th>Correct</th>
+      <th>Words</th>
+    </tr>
+    <% @lesson.lessons_words.each do |lesson_word| %>
+      <tr>
+        <td>
+          <% if lesson_word.word_correct %>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <% else %>
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <% end %>
+        </td>
+        <td>
+          <%= lesson_word.word.content %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

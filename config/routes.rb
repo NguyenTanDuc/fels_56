@@ -8,8 +8,10 @@ Rails.application.routes.draw do
 
   resources :users, except: [:destroy]
   resources :words, only: [:index]
-  resources :categories, only: [:index]
-
+  resources :categories, only: [:index] do
+    resources :lessons, only: [:new, :create, :show]
+  end
+  
   namespace :admin do
     root to: "words#index"
     resources :words

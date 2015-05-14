@@ -1,17 +1,3 @@
-User.create!(name: "Normal User",
-             email: "normal@railstutorial.org",
-             password: "123456",
-             password_confirmation: "123456",
-             level: 2
-             )
-
-User.create!(name: "Example User",
-             email: "example@railstutorial.org",
-             password: "123456",
-             password_confirmation: "123456",
-             level: 1
-             )
-
 5.times do |n|
   name = "Category#{n+1}"
   Category.create!(name: name)
@@ -29,16 +15,20 @@ words = Word.order(:created_at).all
   words.each {|word| word.answers.create! content: content, correct: n == 1}
 end
 
-User.create!(name: "Framgia E-Learning System 56 Administrator",
-             email: "framgia.elearning.system.56@gmail.com",
-             password: "08011992",
-             password_confirmation: "08011992",
-             level: 1)
+User.create!(name: 'Framgia E-Learning System 56 Administrator',
+             email: 'framgia.elearning.system.56@gmail.com',
+             password: '08011992',
+             password_confirmation: '08011992',
+             level: 1,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   User.create!(name: Faker::Name.name,
                email: "example-#{n+1}@framgia.elearning.system.56.com",
-               password: "password",
-               password_confirmation: "password",
-               level: 2)
+               password: 'password',
+               password_confirmation: 'password',
+               level: 2,
+               activated: true,
+               activated_at: Time.zone.now)
 end

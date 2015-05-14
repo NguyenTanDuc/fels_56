@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
+  before_save :downcase_email
+  before_create :create_activation_digest
 
   has_many :active_relationships, class_name: 'Relationship',
            foreign_key: 'follower_id', dependent: :destroy
@@ -40,10 +42,29 @@ class User < ActiveRecord::Base
   def authenticated? attribute, token
     digest = send "#{attribute}_digest"
     return false if digest.nil?
-    BCrypt::Password.new digest.is_password? token
+    BCrypt::Password.new(digest).is_password?(token)
   end
-  
+
   def is_admin?
     level == 1
+  end
+
+  def activate
+    update_attributes activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  private
+
+  def downcase_email
+    self.email = email.downcase
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest activation_token
   end
 end

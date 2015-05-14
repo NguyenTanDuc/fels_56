@@ -33,6 +33,15 @@ vi:
   please_log_in: "Vui Lòng Đăng Nhập Để Tiếp Tục"
   all_users: "Thành Viên"
   change: "Thay Đổi"
+  account_activation: "Kích Hoạt Tài Khoản"
+  password_reset: "Đặt Lại Mật Khẩu"
+  hi: "Xin Chào"
+  click_to_activate: "Nhấn Vào Liên Kết Dưới Đây Để Kích Hoạt Tài Khoản Của Bạn:"
+  activate: "Kích Hoạt!"
+  please_check_email: "Vui Lòng Kiểm Tra Email Của Bạn Để Kích Hoạt Tài Khoản."
+  account_activated: "Tài Khoản Đã Được Kích Hoạt!"
+  invalid_activation_link: "Liên Kết Kích Hoạt Không Hợp Lệ."
+  account_not_activated: "Tài Khoản Chưa Được Kích Hoạt. Vui Lòng Kiểm Tra Email Của Bạn Để Kích Hoạt Tài Khoản."
   activerecord:
     errors:
       models:

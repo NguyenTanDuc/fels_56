@@ -1,12 +1,14 @@
 class WordsController < ApplicationController
+  before_action :logged_in_user
+  
   def index
-    @words = Word.paginate page: params[:page], per_page: 20
     @categories = Category.all
+    filter = ['learned', 'not_learnded']
+    if filter.include? params[:filter]
+      @words = Word.in_category(params[:category_id]).send(params[:filter], current_user)
+                                                     .paginate page: params[:page], per_page: 20
+    else
+      @words = Word.in_category(params[:category_id]).paginate page: params[:page], per_page: 20
+    end
   end
-
-  private
-  def word_params
-    params.require(:word).permit :content, :category_id, answers_attributes: [:id, :content, :correct]
-  end
-
 end

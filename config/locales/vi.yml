@@ -54,6 +54,10 @@ vi:
   password_blank: "Mật Khẩu Không Được Để Trống!"
   password_updated: "Mật Khẩu Đã Được Cập Nhật"
   password_expired: "Liên Kết Đặt Lại Mật Khẩu Đã Hết Hạn"
+  follow: "Theo Dõi"
+  unfollow: "Bỏ Theo Dõi"
+  following: "Đang Theo Dõi"
+  followers: "Người Theo Dõi"
   activerecord:
     errors:
       models:

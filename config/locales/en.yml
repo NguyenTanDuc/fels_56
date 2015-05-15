@@ -71,6 +71,10 @@ en:
   password_blank: "Password Can't Be Blank!"
   password_updated: "Password Updated"
   password_expired: "Password Reset Link Has Been Expired."
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "Following"
+  followers: "Followers"
   activerecord:
     errors:
       models:

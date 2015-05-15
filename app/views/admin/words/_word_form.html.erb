@@ -17,5 +17,6 @@
       <%= render "answer_fields", f: builder %>
     <% end %>    
   </table>
+  <p><%= link_to_add_fields "Add Answer", f, :answers %></p>
   <%= f.submit t(:submit), class: "btn btn-primary" %>
 <% end %>

@@ -3,7 +3,7 @@ class Admin::WordsController < ApplicationController
   before_action :is_admin
 
   def index
-    @categories =  Category.all
+    @categories = Category.all
     filter = ['learned', 'not_learnded']
     if filter.include? params[:filter]
       @words = Word.in_category(params[:category_id]).send(params[:filter], current_user)

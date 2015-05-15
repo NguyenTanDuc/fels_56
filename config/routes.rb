@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, except: [:destroy]
   resources :words, only: [:index]
   resources :account_activations, only: [:edit]
+  resources :password_resets, except: [:show, :index, :destroy]
   resources :categories, only: [:index] do
     resources :lessons, only: [:new, :create, :show]
   end

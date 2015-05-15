@@ -42,6 +42,18 @@ vi:
   account_activated: "Tài Khoản Đã Được Kích Hoạt!"
   invalid_activation_link: "Liên Kết Kích Hoạt Không Hợp Lệ."
   account_not_activated: "Tài Khoản Chưa Được Kích Hoạt. Vui Lòng Kiểm Tra Email Của Bạn Để Kích Hoạt Tài Khoản."
+  forgot_password: "Quên Mật Khẩu?"
+  submit: "Đặt Lại!"
+  email_sent: "Email Với Hướng Dẫn Đặt Lại Mật Khẩu Đã Được Gửi Đi."
+  email_not_found: "Không Tìm Thấy Địa Chỉ Email."
+  click_to_reset_password: "Nhấn Vào Liên Kết Dưới Đây Để Đặt Lại Mật Khẩu:"
+  expire: "Liên Kết Sẽ Hết Hạn Trong 2 Giờ. Nếu Bạn Không Yêu Cầu Đặt Lại Mật Khẩu, Hãy Bỏ Qua Email Này Và Mật Khẩu Của Bạn Sẽ Được Giữ Nguyên."
+  reset_password: "Đặt Lại Mật Khẩu"
+  update_password: "Cập Nhật Mật Khẩu"
+  email: "Email:"
+  password_blank: "Mật Khẩu Không Được Để Trống!"
+  password_updated: "Mật Khẩu Đã Được Cập Nhật"
+  password_expired: "Liên Kết Đặt Lại Mật Khẩu Đã Hết Hạn"
   activerecord:
     errors:
       models:

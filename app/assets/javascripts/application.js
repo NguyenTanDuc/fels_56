@@ -32,6 +32,25 @@ $(document).ready(function() {
       alert("Warning, your word don't have answer correct yet!");
     }
   });
+  
+  // Get words number  
+  var rgroups = [];
+  $('input:radio').each(function(index, el){
+    var i;
+      for(i = 0; i < rgroups.length; i++)
+        if(rgroups[i] == $(el).attr('name'))
+            return true;
+      rgroups.push($(el).attr('name'));
+    }
+  );
+  rgroups = rgroups.length;
+  $('.word_num').text(rgroups);
+  
+  // Show progress lesson
+  $('input:radio').click(function(){
+    var checked = $("input:radio:checked").length;
+    $('.check_num').text(checked);
+  });
 
   // Lesson slider
   $('.bxslider').bxSlider({

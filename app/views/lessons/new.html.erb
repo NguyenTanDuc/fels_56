@@ -1,4 +1,9 @@
 <h1>Lesson</h1>
+<h2 class="progress-result">
+  Progress:
+  <span class="check_num">0</span>/
+  <span class="word_num"></span>
+</h2>
 <%= form_for [@category, @lesson] do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <ul class="bxslider">

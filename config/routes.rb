@@ -10,8 +10,16 @@ Rails.application.routes.draw do
   resources :words, only: [:index]
   resources :account_activations, only: [:edit]
   resources :password_resets, except: [:show, :index, :destroy]
+  resources :relationships, only: [:create, :destroy]
+
   resources :categories, only: [:index] do
     resources :lessons, only: [:new, :create, :show]
+  end
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
   end
 
   namespace :admin do

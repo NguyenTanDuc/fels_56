@@ -15,7 +15,10 @@
         <tr>
           <td><%= category.id %></td>
           <td><%= category.name %></td>
-          <td></td>
+          <td>
+            <%= category.words.learned(current_user).count %> /
+            <%= category.words.count %> words
+          </td>
           <td data-no-turbolink='true'>
             <%= link_to t(:link_edit), edit_admin_category_path(category.id), class: "btn btn-primary" %>
             <%= link_to t(:link_delete), admin_category_path(category.id), method: :delete, 

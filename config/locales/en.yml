@@ -79,6 +79,7 @@ en:
   unfollowed: "Unfollowed"
   add_answer: "Add answer"
   remove: "Remove"
+  finish_lesson: "Are you sure you want finish your lesson?"
   activerecord:
     errors:
       models:

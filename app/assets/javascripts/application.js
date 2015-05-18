@@ -18,21 +18,23 @@
 //= require_tree .
 
 
-$(document).ready(function() {
-  // Answer check only one
-  $("input[type=checkbox]").click(function(){
-    var check_flag = false;    
-    $("input[type=checkbox]").not($(this)).prop('checked', false);
+$(document).ready(function() {  
+  // Warning when not check a correct answer
+  $("input[name=btn_submit]").click(function(){
+    var check_flag = false;  
     $("input[type=checkbox]").each(function(){
       if ($(this).prop('checked') == true){ 
         check_flag = true;
       }
     });
     if(check_flag == false){
-      alert("Warning, your word don't have answer correct yet!");
+      var cf = confirm("Warning, your word don't have answer correct yet!. Are you sure?");
+      if(cf == false){
+        return false;
+      }
     }
   });
-  
+
   // Get words number  
   var rgroups = [];
   $('input:radio').each(function(index, el){
@@ -61,3 +63,7 @@ $(document).ready(function() {
   });
 });
 
+// Answer check only one
+$(document).on('click','input[type=checkbox]', function(){    
+  $("input[type=checkbox]").not($(this)).prop('checked', false);  
+});

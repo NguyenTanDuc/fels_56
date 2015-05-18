@@ -21,7 +21,7 @@
         <span class="glyphicon glyphicon-search">  Search</span>
       </button>
       <% if current_user.is_admin? %>
-        <%= link_to t(:add_new_word), new_admin_word_path, class: "btn btn-success" %>
+        <%= link_to t(:add_new_word), new_admin_word_path, class: "btn btn-success", data: {no_turbolink: true} %>
       <% end %>
     </div>
   </div>

@@ -11,7 +11,7 @@
         <tr>
           <td><%= word.id %></td>
           <td><%= word.content %></td>
-          <td>
+          <td class="col-md-2">
             <%= link_to t(:link_edit), edit_admin_word_path(word.id) %>
             <%= link_to t(:link_delete), admin_word_path(word.id), method: :delete, 
                                         data: {confirm: t(:delete_warning)}, 

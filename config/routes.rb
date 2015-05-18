@@ -16,9 +16,10 @@ Rails.application.routes.draw do
     resources :lessons, only: [:new, :create, :show]
   end
 
-  resources :users do
+  resources :users, except: [:destroy] do
     member do
-      get :following, :followers
+      resources :followers, only: :index
+      resources :followings, only: :index
     end
   end
 

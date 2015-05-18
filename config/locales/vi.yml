@@ -60,6 +60,7 @@ vi:
   followers: "Người Theo Dõi"
   followed: "Đã Theo Dõi"
   unfollowed: "Đã Bỏ Theo Dõi"
+  word: "Từ"
   activerecord:
     errors:
       models:

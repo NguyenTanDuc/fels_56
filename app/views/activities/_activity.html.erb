@@ -4,12 +4,16 @@
 <h4>
   <b><%= activity.user.name %></b>
   <%= activity.status %>
-  <b><%= target.name %></b>
+  <% if activity.status=='learned' %>
+    <%= pluralize target.learned_words_count, t(:word) %> in
+    <b><%= target.category.name %></b>
+  <% else %>
+    <b><%= target.name %></b>
+  <% end %>
 </h4>
 <h4>
   <small>
-    <%= time_ago_in_words(activity.created_at) %>
-    <%= t :ago %>
+    <%= activity.created_at %>
   </small>
 </h4>
 </p>

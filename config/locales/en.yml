@@ -75,6 +75,8 @@ en:
   unfollow: "Unfollow"
   following: "Following"
   followers: "Followers"
+  followed: "Followed"
+  unfollowed: "Unfollowed"
   activerecord:
     errors:
       models:

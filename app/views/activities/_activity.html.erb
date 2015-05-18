@@ -1,0 +1,16 @@
+<hr>
+<% target = activity.target %>
+<p>
+<h4>
+  <b><%= activity.user.name %></b>
+  <%= activity.status %>
+  <b><%= target.name %></b>
+</h4>
+<h4>
+  <small>
+    <%= time_ago_in_words(activity.created_at) %>
+    <%= t :ago %>
+  </small>
+</h4>
+</p>
+

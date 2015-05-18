@@ -58,6 +58,8 @@ vi:
   unfollow: "Bỏ Theo Dõi"
   following: "Đang Theo Dõi"
   followers: "Người Theo Dõi"
+  followed: "Đã Theo Dõi"
+  unfollowed: "Đã Bỏ Theo Dõi"
   activerecord:
     errors:
       models:

@@ -80,6 +80,7 @@ en:
   add_answer: "Add answer"
   remove: "Remove"
   finish_lesson: "Are you sure you want finish your lesson?"
+  word: "Word"
   activerecord:
     errors:
       models:

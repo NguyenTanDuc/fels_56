@@ -12,10 +12,10 @@ class Relationship < ActiveRecord::Base
 
   private
   def follow_activity
-    create_activity follower_id, followed_id, "follow"
+    create_activity follower_id, followed_id, 'follow'
   end
 
   def unfollow_activity
-    create_activity follower_id, followed_id, "unfollow"
+    create_activity follower_id, followed_id, 'unfollow'
   end
 end

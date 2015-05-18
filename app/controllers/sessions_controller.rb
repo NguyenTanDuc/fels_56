@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:danger] = t :danger
-      render 'new'
+      render :new
     end
   end
 

@@ -77,10 +77,12 @@ en:
   followers: "Followers"
   followed: "Followed"
   unfollowed: "Unfollowed"
-  add_answer: "Add answer"
+  add_answer: "Add Answer"
   remove: "Remove"
-  finish_lesson: "Are you sure you want finish your lesson?"
+  finish_lesson: "Finish Your Lesson?"
   word: "Word"
+  user_deleted: "User Deleted"
+  delete: "Delete!"
   activerecord:
     errors:
       models:

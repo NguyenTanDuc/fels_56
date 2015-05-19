@@ -1,20 +1,21 @@
 <%= form_for words_path, method: :get do |f| %>
   <div class="row">
     <p>Categories</p>
+
     <div id="search-field">
-      <div class="col-md-5">      
-        <%= collection_select("", :category_id, @categories, :id, 
-                                  :name, {prompt: false}, 
-                                  {class: "form-control"}) %>
+      <div class="col-md-5">
+        <%= collection_select("", :category_id, @categories, :id,
+                              :name, {prompt: false},
+                              {class: "form-control"}) %>
         <table class="table table-bordered">
-          <% {learned: "Learned", not_learned: "Not learned", all_word: "All"}.each do |key,value| %>
+          <% {learned: "Learned", not_learned: "Not learned", all_word: "All"}.each do |key, value| %>
             <tr>
               <td><%= value %></td>
               <td><input type="radio" value="<%= key %>" name="filter"></td>
             </tr>
           <% end %>
         </table>
-      </div>    
+      </div>
     </div>
     <div class="col-md-5">
       <button class="btn btn-success">

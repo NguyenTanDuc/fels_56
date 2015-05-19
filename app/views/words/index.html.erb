@@ -1,14 +1,14 @@
-<div class="container">    
-  <%= render 'shared/search_form' %>  
+<div class="container">
+  <%= render 'shared/search_form' %>
   <table class="table table-bordered">
     <tr>
       <th>ID</th>
-      <th>Word content</th>        
+      <th>Word content</th>
     </tr>
     <% @words.each do |word| %>
       <tr>
         <td><%= word.id %></td>
-        <td><%= word.content %></td>          
+        <td><%= word.content %></td>
       </tr>
     <% end %>
   </table>

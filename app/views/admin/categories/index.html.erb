@@ -12,7 +12,7 @@
         <th>Action</th>
       </tr>
       <% @categories.each do |category| %>
-        <tr>
+        <tr id="cate_<%= category.id %>">
           <td><%= category.id %></td>
           <td><%= category.name %></td>
           <td>

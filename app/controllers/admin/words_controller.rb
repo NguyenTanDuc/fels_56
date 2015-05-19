@@ -50,7 +50,11 @@ class Admin::WordsController < ApplicationController
     @word = Word.find params[:id]
     if @word.destroy
       flash[:success] = t :delete_success
-      redirect_to admin_words_path
+      respond_to do |format|
+        format.html {redirect_to admin_words_url}
+        format.json
+        format.js
+      end
     else
       flash[:danger] = t :delete_fail
       redirect_to admin_words_path

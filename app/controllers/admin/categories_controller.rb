@@ -38,7 +38,11 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.find params[:id]
     if @category.destroy
       flash[:success] = t :delete_success
-      redirect_to admin_categories_path
+      respond_to do |format|
+        format.html {redirect_to admin_categories_url}
+        format.json
+        format.js
+      end
     else
       flash[:danger] = t :delete_fail
       redirect_to admin_categories_path

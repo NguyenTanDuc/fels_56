@@ -8,7 +8,7 @@
         <th>Action</th>
       </tr>
       <% @words.each do |word| %>
-        <tr>
+        <tr id="word_<%= word.id %>">
           <td><%= word.id %></td>
           <td><%= word.content %></td>
           <td class="col-md-3">

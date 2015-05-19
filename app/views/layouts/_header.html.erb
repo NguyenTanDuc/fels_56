@@ -13,9 +13,6 @@
             </li>
             <li>
               <%= link_to t(:categories), admin_categories_path %>
-            </li>           
-            <li>
-              <%= link_to t(:user_show), admin_root_path %>
             </li>
           <% else %>
             <li>
@@ -23,11 +20,11 @@
             </li>
             <li>
               <%= link_to t(:categories), categories_path %>
-            </li>            
-            <li>
-              <%= link_to t(:user_show), root_path %>
             </li>
           <% end %>
+          <li>
+            <%= link_to t(:user_show), current_user %>
+          </li>
           <li>
             <%= link_to t(:all_users), users_path %>
           </li>

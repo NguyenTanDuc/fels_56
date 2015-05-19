@@ -1,4 +1,4 @@
-class Admin::WordsController < ApplicationController  
+class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :admin_user
 
@@ -6,10 +6,12 @@ class Admin::WordsController < ApplicationController
     @categories = Category.all
     filter = ['learned', 'not_learned']
     if filter.include? params[:filter]
-      @words = Word.in_category(params[:category_id]).send(params[:filter], current_user)
-                                                     .paginate page: params[:page], per_page: 20
+      @words = Word.in_category(params[:category_id])
+                 .send(params[:filter], current_user)
+                 .paginate page: params[:page], per_page: 20
     else
-      @words = Word.in_category(params[:category_id]).paginate page: params[:page], per_page: 20
+      @words = Word.in_category(params[:category_id])
+                 .paginate page: params[:page], per_page: 20
     end
   end
 
@@ -19,16 +21,16 @@ class Admin::WordsController < ApplicationController
     4.times {@word.answers.build}
   end
 
-  def create   
+  def create
     @categories = Category.all
     @word = Word.new word_params
     if @word.save
       flash[:success] = t :create_success
       redirect_to admin_words_path
     else
-      render "new"
+      render :new
     end
-  end  
+  end
 
   def edit
     @word = Word.find params[:id]
@@ -42,7 +44,7 @@ class Admin::WordsController < ApplicationController
       flash[:success] = t :update_success
       redirect_to admin_words_path
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -59,6 +61,7 @@ class Admin::WordsController < ApplicationController
 
   private
   def word_params
-    params.require(:word).permit :content, :category_id, answers_attributes: [:id, :content, :correct]
+    params.require(:word).permit :content, :category_id,
+                                 answers_attributes: [:id, :content, :correct]
   end
 end

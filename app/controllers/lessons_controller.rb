@@ -15,7 +15,7 @@ class LessonsController < ApplicationController
     @lesson = @category.lessons.new lesson_params
     @lesson.user_id = current_user.id
     if @lesson.save
-      redirect_to category_lesson_path @category, @lesson 
+      redirect_to category_lesson_path @category, @lesson
     else
       flash[:danger] = t :create_fail
       redirect_to root_path

@@ -18,18 +18,18 @@
 //= require_tree .
 
 
-$(document).ready(function() {  
+$(document).ready(function () {
   // Warning when not check a correct answer
-  $("input[name=btn_submit]").click(function(){
-    var check_flag = false;  
-    $("input[type=checkbox]").each(function(){
-      if ($(this).prop('checked') == true){ 
+  $("input[name=btn_submit]").click(function () {
+    var check_flag = false;
+    $("input[type=checkbox]").each(function () {
+      if ($(this).prop('checked') == true) {
         check_flag = true;
       }
     });
-    if(check_flag == false){
+    if (!check_flag) {
       var cf = confirm("Warning, your word don't have answer correct yet!. Are you sure?");
-      if(cf == false){
+      if (cf == false) {
         return false;
       }
     }
@@ -37,19 +37,19 @@ $(document).ready(function() {
 
   // Get words number  
   var rgroups = [];
-  $('input:radio').each(function(index, el){
-    var i;
-      for(i = 0; i < rgroups.length; i++)
-        if(rgroups[i] == $(el).attr('name'))
-            return true;
+  $('input:radio').each(function (index, el) {
+      var i;
+      for (i = 0; i < rgroups.length; i++)
+        if (rgroups[i] == $(el).attr('name'))
+          return true;
       rgroups.push($(el).attr('name'));
     }
   );
   rgroups = rgroups.length;
   $('.word_num').text(rgroups);
-  
+
   // Show progress lesson
-  $('input:radio').click(function(){
+  $('input:radio').click(function () {
     var checked = $("input:radio:checked").length;
     $('.check_num').text(checked);
   });
@@ -64,6 +64,6 @@ $(document).ready(function() {
 });
 
 // Answer check only one
-$(document).on('click','input[type=checkbox]', function(){    
-  $("input[type=checkbox]").not($(this)).prop('checked', false);  
+$(document).on('click', 'input[type=checkbox]', function () {
+  $("input[type=checkbox]").not($(this)).prop('checked', false);
 });

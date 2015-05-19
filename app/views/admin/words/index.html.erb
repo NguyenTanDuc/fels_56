@@ -1,4 +1,4 @@
-<div class="container">      
+<div class="container">
   <div class="row">
     <%= render 'shared/search_form' %>
     <table class="table table-bordered">
@@ -13,9 +13,9 @@
           <td><%= word.content %></td>
           <td class="col-md-3">
             <%= link_to t(:link_edit), edit_admin_word_path(word.id), class: "btn btn-primary col-md-5" %>
-            <%= link_to t(:link_delete), admin_word_path(word.id), method: :delete, 
-                                        data: {confirm: t(:delete_warning)}, 
-                                        class: "btn btn-primary pull-right col-md-5" %>
+            <%= link_to t(:link_delete), admin_word_path(word.id), method: :delete,
+                        data: {confirm: t(:delete_warning)},
+                        class: "btn btn-primary pull-right col-md-5" %>
           </td>
         </tr>
       <% end %>

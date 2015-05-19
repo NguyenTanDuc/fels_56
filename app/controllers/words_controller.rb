@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   
   def index
     @categories = Category.all
-    filter = ['learned', 'not_learnded']
+    filter = ['learned', 'not_learned']
     if filter.include? params[:filter]
       @words = Word.in_category(params[:category_id]).send(params[:filter], current_user)
                                                      .paginate page: params[:page], per_page: 20

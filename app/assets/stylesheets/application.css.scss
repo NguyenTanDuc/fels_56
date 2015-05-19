@@ -31,7 +31,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 section {
@@ -304,4 +304,11 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.home-btn {
+  width: 49%;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
 }

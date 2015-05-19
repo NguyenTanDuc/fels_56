@@ -9,8 +9,8 @@
   <ul class="bxslider">
     <%= f.fields_for :lessons_words do |builder| %>
       <%= render "lessons_words_form", f: builder %>
-    <% end %>  
-  </ul>   
+    <% end %>
+  </ul>
 <hr>
 <div class="row">
   <%= f.submit t(:submit), class: "btn btn-primary", data: {confirm: t(:finish_lesson)} %>

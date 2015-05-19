@@ -4,8 +4,8 @@
     <tr>
       <td>Categories</td>
       <td>
-        <%= f.collection_select(:category_id, @categories, :id, 
-                                :name, {prompt: false}, 
+        <%= f.collection_select(:category_id, @categories, :id,
+                                :name, {prompt: false},
                                 {class: "form-control"}) %>
       </td>
     </tr>
@@ -15,7 +15,7 @@
     </tr>
     <%= f.fields_for :answers do |builder| %>
       <%= render "answer_fields", f: builder %>
-    <% end %>    
+    <% end %>
   </table>
   <%= link_to_add_fields t(:add_answer), f, :answers %>
   <%= f.submit t(:submit), class: "btn btn-primary", name: "btn_submit" %>

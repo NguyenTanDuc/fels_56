@@ -26,5 +26,6 @@ Rails.application.routes.draw do
     root to: 'words#index'
     resources :words
     resources :categories
+    resources :users, only: :destroy
   end
 end

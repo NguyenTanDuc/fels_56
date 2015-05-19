@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
   has_many :lessons
-  has_many :activities
+  has_many :activities, dependent: :destroy
 
   validates :name, presence: true
   validates :email, confirmation: true, uniqueness: true, presence: true

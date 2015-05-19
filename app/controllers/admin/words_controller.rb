@@ -1,10 +1,10 @@
 class Admin::WordsController < ApplicationController  
   before_action :logged_in_user
-  before_action :is_admin
+  before_action :admin_user
 
   def index
     @categories = Category.all
-    filter = ['learned', 'not_learnded']
+    filter = ['learned', 'not_learned']
     if filter.include? params[:filter]
       @words = Word.in_category(params[:category_id]).send(params[:filter], current_user)
                                                      .paginate page: params[:page], per_page: 20
@@ -60,9 +60,5 @@ class Admin::WordsController < ApplicationController
   private
   def word_params
     params.require(:word).permit :content, :category_id, answers_attributes: [:id, :content, :correct]
-  end
-
-  def is_admin
-    redirect_to root_path unless current_user.is_admin?
   end
 end

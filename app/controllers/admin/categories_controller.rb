@@ -1,6 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user
-  before_action :is_admin
+  before_action :admin_user
 
   def index
     @categories = Category.paginate page: params[:page], per_page: 20
@@ -48,9 +48,5 @@ class Admin::CategoriesController < ApplicationController
   private
   def category_params
     params.require(:category).permit :name
-  end
-
-  def is_admin
-    redirect_to root_path unless current_user.is_admin?
   end
 end

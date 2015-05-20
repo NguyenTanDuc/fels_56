@@ -5,7 +5,6 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'sqlite3', group: [:development, :test]
 gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'uglifier'

@@ -5,7 +5,7 @@ gem 'bcrypt'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
 gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'uglifier'
@@ -30,6 +30,6 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'puma' 
+  gem 'puma'
 end
 

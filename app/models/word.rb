@@ -8,9 +8,9 @@ class Word < ActiveRecord::Base
 
   accepts_nested_attributes_for :answers, allow_destroy: true
 
-  scope :learned, ->user{where("id IN (SELECT word_id FROM categories, lessons_words, lessons
-                                       WHERE lessons.user_id = #{user.id})")}
-  scope :not_learned, ->user{where("id NOT IN (SELECT word_id FROM lessons_words, lessons
-                                               WHERE lessons.user_id = #{user.id})")}
+  scope :learned, ->user{where("words.id IN (SELECT word_id FROM lessons_words, lessons
+                                       WHERE lessons.user_id = #{user.id} AND lessons.id = lessons_words.lesson_id)")}
+  scope :not_learned, ->user{where("words.id NOT IN (SELECT word_id FROM lessons_words, lessons
+                                               WHERE lessons.user_id = #{user.id} AND lessons.id = lessons_words.lesson_id)")}
   scope :in_category, ->category_id{where category_id: category_id if category_id.present?}
 end

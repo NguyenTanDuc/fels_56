@@ -64,6 +64,15 @@ vi:
   user_deleted: "Đã Xóa Người Dùng"
   delete: "Xóa!"
   delete_warning: "Bạn Có Chắc Chắn Không?"
+  category_name: "Tên Chủ Đề"
+  learning_process: "Tiến Trình Học Tập"
+  action: "Hành Động"
+  word_content: "Nội Dung Của Từ"
+  new_category: "Chủ Đề Mới"
+  edit_category: "Chỉnh Sửa Chủ Đề"
+  new_word: "Từ Mới"
+  edit_word: "Chỉnh Sửa Từ"
+  answer: "Câu Trả Lời"
   activerecord:
     errors:
       models:

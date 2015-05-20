@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <h1>Categories</h1>
+    <h1><%= t :categories %></h1>
     <table class="table table-bordered">
       <tr>
         <th>ID</th>
-        <th>Categories name</th>
-        <th>Learn process</th>
-        <th>Action</th>
+        <th><%= t :category_name %></th>
+        <th><%= t :learning_process %></th>
+        <th><%= t :action %></th>
       </tr>
       <% @categories.each do |category| %>
         <tr>

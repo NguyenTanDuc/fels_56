@@ -83,6 +83,15 @@ en:
   word: "Word"
   user_deleted: "User Deleted"
   delete: "Delete!"
+  category_name: "Category Name"
+  learning_process: "Learning Process"
+  action: "Action"
+  word_content: "Word Content"
+  new_category: "New Category"
+  edit_category: "Edit Category"
+  new_word: "New Word"
+  edit_word: "Edit Word"
+  answer: "Answer"
   activerecord:
     errors:
       models:

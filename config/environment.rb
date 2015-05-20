@@ -11,7 +11,7 @@ ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
   user_name: ENV['USER_NAME'],
   password: ENV['PASSWORD'],
-  domain: ENV['DOMAIN'],
+  domain: 'fels-56.herokuapp.com',
   address: 'smtp.gmail.com',
   port: 587,
   authentication: :plain,

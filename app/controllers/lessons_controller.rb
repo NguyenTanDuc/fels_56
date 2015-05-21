@@ -4,7 +4,7 @@ class LessonsController < ApplicationController
   def new
     @category = Category.find params[:category_id]
     @lesson = @category.lessons.build
-    @words = @category.random_words.take(20)
+    @words = @category.words.random_words
     @words.each do |word|
       @lesson.lessons_words.build word_id: word.id
     end

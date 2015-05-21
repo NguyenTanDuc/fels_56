@@ -39,11 +39,11 @@ class Admin::WordsController < ApplicationController
 
   def update
     @word = Word.find params[:id]
-    @categories = Category.all
     if @word.update_attributes word_params
       flash[:success] = t :update_success
       redirect_to admin_words_path
     else
+      @categories = Category.all
       render :edit
     end
   end
@@ -52,16 +52,15 @@ class Admin::WordsController < ApplicationController
     @word = Word.find params[:id]
     if @word.destroy
       flash[:success] = t :delete_success
-      redirect_to admin_words_path
     else
       flash[:danger] = t :delete_fail
-      redirect_to admin_words_path
     end
+      redirect_to admin_words_path
   end
 
   private
   def word_params
     params.require(:word).permit :content, :category_id,
-                                 answers_attributes: [:id, :content, :correct]
+                                 answers_attributes: [:id, :content, :correct, :_destroy]
   end
 end

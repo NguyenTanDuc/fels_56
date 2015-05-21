@@ -1,12 +1,16 @@
 <div class="row">
   <h1><%= @category.name %></h1>
   <h2>Result: <%= @lesson.mark %>/20</h2>
+  <p>
+    <%= link_to t(:export_csv), category_lesson_path(format: :csv), class: "btn btn-primary" %>
+    <%= link_to "export to Excel", category_lesson_path(format: :xls), class: "btn btn-primary" %>
+  </p>
   <table class="table table-bordered">
     <tr>
-      <th>Correct</th>
-      <th>Words</th>
+      <th><%= t :correct %></th>
+      <th><%= t :word %></th>
     </tr>
-    <% @lesson.lessons_words.each do |lesson_word| %>
+    <% @lessons_words.each do |lesson_word| %>
       <tr>
         <td>
           <% if lesson_word.word_correct %>

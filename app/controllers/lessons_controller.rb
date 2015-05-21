@@ -25,6 +25,12 @@ class LessonsController < ApplicationController
   def show
     @category = Category.find params[:category_id]
     @lesson = Lesson.find params[:id]
+    @lessons_words = @lesson.lessons_words.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @lessons_words.to_csv}
+      format.xls
+    end
   end
 
   private

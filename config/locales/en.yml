@@ -79,7 +79,7 @@ en:
   unfollowed: "Unfollowed"
   add_answer: "Add Answer"
   remove: "Remove"
-  finish_lesson: "Finish Your Lesson?"
+  finish_lesson: "Finish your lesson?"
   word: "Word"
   user_deleted: "User Deleted"
   delete: "Delete!"
@@ -92,6 +92,11 @@ en:
   new_word: "New Word"
   edit_word: "Edit Word"
   answer: "Answer"
+  export_csv: "Export to CSV"
+  correct: "Correct"
+  word: "Words"
+  total: "Total"
+  per_20: "/20"
   activerecord:
     errors:
       models:

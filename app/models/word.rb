@@ -13,4 +13,5 @@ class Word < ActiveRecord::Base
   scope :not_learned, ->user{where("words.id NOT IN (SELECT word_id FROM lessons_words, lessons
                                                WHERE lessons.user_id = #{user.id} AND lessons.id = lessons_words.lesson_id)")}
   scope :in_category, ->category_id{where category_id: category_id if category_id.present?}
+  scope :random_words, ->{limit(20).sort_by{rand}} 
 end

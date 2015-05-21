@@ -16,7 +16,7 @@ class Admin::CategoriesController < ApplicationController
       flash[:success] = t :create_success
       redirect_to admin_categories_path
     else
-      render "new"
+      render :new
     end
   end
 
@@ -30,7 +30,7 @@ class Admin::CategoriesController < ApplicationController
       flash[:success] = t :update_success
       redirect_to admin_categories_path
     else
-      render "edit"
+      render :edit
     end
   end
 
@@ -38,11 +38,10 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.find params[:id]
     if @category.destroy
       flash[:success] = t :delete_success
-      redirect_to admin_categories_path
     else
       flash[:danger] = t :delete_fail
-      redirect_to admin_categories_path
     end
+    redirect_to admin_categories_path
   end
 
   private
